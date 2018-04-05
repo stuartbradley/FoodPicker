@@ -1,0 +1,14 @@
+﻿@model FoodPicker.Models.Meal
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h5>Meals</h5>
+<ul>
+@foreach(var meal in Model.Name)
+{
+    @meal
+}
+    </ul>

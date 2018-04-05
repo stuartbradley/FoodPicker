@@ -13,6 +13,7 @@ namespace FoodPicker.Data
         {
             new Meal()
             {
+                Id = 1,
                 Name = "fish and chips",
                 Ingredients = new Ingredient[]
                 {
@@ -23,6 +24,7 @@ namespace FoodPicker.Data
             },
             new Meal()
             {
+                Id = 2,
                 Name = "fajitas",
                 Ingredients = new Ingredient[]
                 {
@@ -34,6 +36,7 @@ namespace FoodPicker.Data
             },
             new Meal()
             {
+                Id = 3,
                 Name = "cumberland Pie",
                 Ingredients = new Ingredient[]
                 {
@@ -41,7 +44,7 @@ namespace FoodPicker.Data
                 }
             }, 
             new Meal()
-            {
+            {   Id = 4,
                 Name = "spag and Balls",
                 Ingredients = new Ingredient[]
                 {
@@ -53,6 +56,7 @@ namespace FoodPicker.Data
             },
             new Meal()
             {
+                Id = 5,
                 Name = "toad in the hole",
                 Ingredients = new Ingredient[]
                 {
@@ -64,6 +68,7 @@ namespace FoodPicker.Data
             }, 
             new Meal()
             {
+                Id = 6,
                 Name = "corned beef hash",
                 Ingredients = new Ingredient[]
                 {
@@ -74,6 +79,20 @@ namespace FoodPicker.Data
                 }
             }
         };
+        public Meal GetMeal(int id)
+        {
+            Meal MealToreturn = null;
+            foreach(var meal in meals)
+            {
+                if(meal.Id == id)
+                {
+                    MealToreturn = meal;
+                    break;
+                }
+                
+            }
+            return MealToreturn;
+        }
     }
 }
     
