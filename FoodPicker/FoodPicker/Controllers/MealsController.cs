@@ -16,14 +16,19 @@ namespace FoodPicker.Controllers
             foodRepository = new FoodRepository();
         }
 
-        public String Index()
+        public ActionResult Detail(String id)
         {
-            return "this is it";
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            var food = foodRepository.GetStringMeal(id);
+            return View(food);
         }
 
-        public ActionResult Detail(int? id)
+        public ActionResult Detail()
         {
-            var food = foodRepository.GetMeal(id.Value);
+            var food = foodRepository.GetRandomMeal();
             return View(food);
         }
 

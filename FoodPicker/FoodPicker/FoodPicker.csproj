@@ -142,7 +142,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\MealController.cs" />
+    <Compile Include="Controllers\MealsController.cs" />
     <Compile Include="Data\FoodRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,7 +187,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Meals\Detail.cshtml" />
     <Content Include="Views\Meals\Contact.cshtml" />
-    <Content Include="Views\Meals\Index.cshtml" />
+    <Content Include="Views\Meals\Pick.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

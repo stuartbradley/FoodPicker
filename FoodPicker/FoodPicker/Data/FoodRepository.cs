@@ -79,7 +79,7 @@ namespace FoodPicker.Data
                 }
             }
         };
-        public Meal GetMeal(int id)
+        public Meal GetNumberedMeal(int? id)
         {
             Meal MealToreturn = null;
             foreach(var meal in meals)
@@ -92,6 +92,29 @@ namespace FoodPicker.Data
                 
             }
             return MealToreturn;
+        }
+
+        public Meal GetStringMeal(String name)
+        {
+            Meal MealToreturn = null;
+            foreach (var meal in meals)
+            {
+                if (meal.Name == name)
+                {
+                    MealToreturn = meal;
+                    break;
+                }
+
+            }
+            return MealToreturn;
+        }
+
+        public Meal GetRandomMeal()
+        {
+            Random rnd = new Random();
+            int rndMeal = rnd.Next(0, meals.Length);
+            return meals[rndMeal];
+
         }
     }
 }

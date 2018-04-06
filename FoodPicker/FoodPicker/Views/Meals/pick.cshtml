@@ -1,0 +1,20 @@
+﻿@model FoodPicker.Models.Meal
+
+@{
+    ViewBag.Title = "Meal of choice";
+}
+
+<h1>
+    @foreach (var meal in Model.Name)
+    {
+
+        @meal
+
+    }
+</h1>
+@foreach (var ing in Model.Ingredients)
+{
+    <li>
+        @ing.Name
+    </li>
+}
